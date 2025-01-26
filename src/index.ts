@@ -9,6 +9,10 @@ const port = process.env.PORT || 3000;
 
 dotenv.config({ path: __dirname +'/.env'});
 
+app.get("/", (res: Response) => {
+  res.json({ message: "healthy"})
+});
+
 app.get("/sample-api", (req: Request, res: Response) => {
   res.json({ message: "Welcome to the Express + Typescript Server!"})
 });
