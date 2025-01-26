@@ -9,7 +9,7 @@ const port = process.env.PORT || 3000;
 
 dotenv.config({ path: __dirname +'/.env'});
 
-app.get("/", (res: Response) => {
+app.get("/", (req: Request, res: Response) => {
   res.json({ message: "healthy"})
 });
 
