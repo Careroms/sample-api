@@ -9,5 +9,5 @@ if [ -n $(docker images --filter=reference="$DOCKER_IMAGE:$DOCKER_TAG" -q)]; the
   docker images rm $DOCKER_IMAGE:$DOCKER_TAG
 fi
 
-docker build -t $DOCKER_IMAGE:$DOCKER_TAG .
+docker build -t $DOCKER_IMAGE:$DOCKER_TAG --build-args RETURN_VALUE="1" .
 docker run -idt --name sample-api $DOCKER_IMAGE:$DOCKER_TAG
