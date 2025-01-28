@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx tsx --env-file=.env --watch src/index.ts"
+    "start": "START_ENV=$ENV npx tsx --env-file=.env src/index.ts"
   },
   "author": "",
   "license": "ISC",
